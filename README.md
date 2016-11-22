@@ -16,6 +16,9 @@ cd path/to/rollup-boilerplate
 
 # install dependencies
 npm install
+
+# start rollup
+npm run watch
 ```
 
 ## Folder structure
