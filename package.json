@@ -6,17 +6,16 @@
   "scripts": {
     "dev": "rollup -c --watch",
     "reload": "livereload 'build/'",
-    "watch": "npm-run-all --parallel reload dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "npm-run-all --parallel reload dev"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/jlengstorf/learn-rollup.git"
+    "url": "https://github.com/jake-wies/rollup-boilerplate.git"
   },
   "author": "Jake Wiesler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jlengstorf/learn-rollup/issues"
+    "url": "https://github.com/jake-wies/rollup-boilerplate/issues"
   },
   "homepage": "https://github.com/jlengstorf/learn-rollup#readme",
   "devDependencies": {
