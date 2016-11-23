@@ -24,10 +24,10 @@ Rollup uses `src/scripts/main.js` as the main entry point to your app. Modules c
 
 ```
 #import some ES6 Module
-import some_Method from './modules/some_file.js';
+import { some_Method } from './modules/some_file.js';
 ```
 
-Rollup will detect changes to this `main.js` file and bundle up your JS, run it through the plugins you've provided, and output the file to the `build` directory. See the `.rollup.config.js` for all configuration settings.
+Rollup will detect changes to this `main.js` file and bundle up your JS, run it through the plugins you've provided, and output the file to the `build` directory. See the `rollup.config.js` for all configuration settings.
 
 ## Why Rollup?
 
