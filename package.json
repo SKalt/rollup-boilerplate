@@ -2,7 +2,7 @@
   "name": "rollup-boilerplate",
   "version": "0.0.1",
   "description": "Short and sweet RollupJS boilerplate with babel support, livereload and PostCSS capabilities.",
-  "main": "build/js/main.min.js",
+  "main": "build/js/main.js",
   "scripts": {
     "dev": "rollup -c --watch",
     "reload": "livereload 'build/'",
