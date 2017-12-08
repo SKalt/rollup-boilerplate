@@ -7,8 +7,10 @@
 	    "ENV": true
 	  },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 8
     },
     "rules": {
         "indent": [
