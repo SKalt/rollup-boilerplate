@@ -33,7 +33,12 @@ import { some_Method } from './modules/some_file.js';
 Rollup will detect changes to this `main.js` file and bundle up your JS, run it through the plugins you've provided in the `plugins` array located in `rollup.config.js`, and output the file to the `build` directory. See the `rollup.config.js` for all configuration settings.
 
 ## Why Rollup?
+[Rollup's creator said it best](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c):
+<blockquote cite="">
 
-[Rollup](http://rollupjs.org/) is a module bundler similar to [webpack](https://webpack.github.io/) and [browserify](http://browserify.org/) with slight improvements. These improvements are mainly the ability to bundle up ES6 modules and [tree-shaking](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80#.vw9os1ov5). Tree-shaking is a feature that allows a module bundler to statically analyze JavaScript files before injecting them onto the document, removing any unused code that may happen to be in the file. With webpack and Browserify, the entire module is included into the main JS file. With Rollup however, only the code you specifically export from your module will be included. This reduces file size and performance.
+TL;DR: Use webpack for apps, and Rollup for libraries
 
-_Note: Tree-shaking will be available in webpack 2._
+...
+
+If you need code-splitting, or you have lots of static assets, or you’re building something with lots of CommonJS dependencies, Webpack is a better choice. If your codebase is ES2015 modules and you’re making something to be used by other people, you probably want Rollup.
+</blockquote>
