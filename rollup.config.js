@@ -1,3 +1,4 @@
+/* eslint-env node */
 // Rollup plugins
 import babel from 'rollup-plugin-babel';
 import eslint from 'rollup-plugin-eslint';
@@ -14,20 +15,22 @@ import cssnext from 'postcss-cssnext';
 import cssnano from 'cssnano';
 
 export default {
-  entry: 'src/scripts/main.js',
-  dest: 'build/js/main.js',
-  format: 'iife',
-  sourceMap: 'inline',
+  input: 'src/scripts/main.js',
+  output: {
+    file: 'build/js/main.js',
+    format: 'iife',
+    sourcemap: 'inline'
+  },
   plugins: [
-		postcss({
-		  plugins: [
+    postcss({
+      plugins: [
         simplevars(),
         nested(),
         cssnext({ warnForDuplicates: false, }),
         cssnano()
       ],
-			extensions: ['.css']
-		}),
+      extensions: ['.css']
+    }),
     resolve({
       jsnext: true,
       main: true,
@@ -42,7 +45,7 @@ export default {
     babel({
       exclude: 'node_modules/**',
     }),
-		replace({
+    replace({
       exclude: 'node_modules/**',
       ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
